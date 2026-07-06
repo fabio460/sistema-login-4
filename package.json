@@ -12,8 +12,13 @@
     "build": "prisma generate && prisma db push"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.9.2",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.9.1",
+    "@types/pg": "^8.20.0",
+    "dotenv-cli": "^11.0.0",
     "prisma": "6.19",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
