@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+  //output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Disciplina {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  /// Field referred in an index, but found no data to define the type.
+  codigo_disciplina Json?  @unique
+}
+
+model Periodo {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+}
+
+model Usuario {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  email String @unique
+  nome  String
+  senha String
+}
